@@ -1,0 +1,17 @@
+{
+  "name": "bank",
+  "version": "1.0.0",
+  "description": "just a sample",
+  "scripts": {
+    "watch": "grunt watch"
+  },
+  "author": "Bob <shiftsource@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^2.12.0",
+    "grunt": "^1.0.1",
+    "grunt-cli": "^1.2.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-sass": "^1.2.0"
+  }
+}
