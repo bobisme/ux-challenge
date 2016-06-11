@@ -37,7 +37,7 @@
   <div class="content">
     <div class="container">
       <div class="row">
-        <div class="main">
+        <div class="main" style="position:relative">
           <h1 class="main__header">Best Bank Ever!</h1>
 
           <p>
@@ -68,15 +68,38 @@
               malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat
               vitae, ultricies eget, tempor sit amet, ante.
             </p>
-            <img class="mobile-info__phone" alt="Mobile"
-            src="/img/phone.png" height="175" width="103">
+            <img class="mobile-info__phone" alt=""
+            src="/img/phone.png" width="103">
           </div>
 
-          <div class="rates">
+          <div id="rates" class="rates" style="height:0;overflow:hidden">
             <h2 class="rates-header">
               <span class="rates-header__left">Rates</span>
               <span class="rates-header__right">Check them out.</span>
             </h2>
+
+            <table id="rateTable" class="rate-table"
+              border="0" cellspacing="0" cellpadding="0">
+              <thead>
+                <tr>
+                  <th>&nbsp;</th>
+                  <th>Annual Percentage Yield</th>
+                  <th>Est. Earnings for 1 Year*</th>
+                </tr>
+              </thead>
+              <tbody>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th colspan="3">*Based on $50,000 deposit.</th>
+                </tr>
+              </tfoot>
+            </table>
+
+            <div id="rateError" class="rates__error">
+              Could not load rate data.
+            </div>
+
           </div>
 
         </div>
@@ -111,6 +134,8 @@
       </div>
     </div>
   </footer>
+
+  <script src="/js/rate-loading.js"></script>
 
 </body>
 </html>

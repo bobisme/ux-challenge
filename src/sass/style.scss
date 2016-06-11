@@ -91,6 +91,7 @@ ul {
 
 .rates {
     margin-top: 4rem;
+    position: relative;
 }
 
 .rates-header {
@@ -109,6 +110,44 @@ ul {
 }
 .rates-header__right {
     font-weight: 400;
+}
+
+.rates__error {
+    display: none;
+    font-style: italic;
+    padding: 1rem 2rem;
+    background: lightyellow;
+}
+
+.rate-table {
+    width: 100%;
+
+    th, .rate-row__apy, .rate-row__earnings {
+        text-align: right;
+    }
+
+    th {
+        font-size: 0.8rem;
+        font-weight: 400;
+        color: lighten($body-text-color, 30%);
+        line-height: 2rem;
+    }
+
+    td {
+        font-size: 16px;
+        line-height: 3rem;
+        background: $green-row-1;
+        padding: 0 20px;
+    }
+}
+
+.rate-row--alt td {
+    background: $green-row-2;
+}
+
+.rate-row--featured td {
+    font-weight: bold;
+    font-size: 18px;
 }
 
 @import 'footer';
