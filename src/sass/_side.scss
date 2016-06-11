@@ -42,7 +42,6 @@ $inactive-tab-bg: #DDEBE1;
   font-size: 1.1rem;
   border: 1px solid #CCC;
   border-bottom: 0;
-  border-left-width: 0;
 
   background: $inactive-tab-bg;
   color: $link-color;
@@ -50,14 +49,24 @@ $inactive-tab-bg: #DDEBE1;
   line-height: 2.3rem;
   margin-top: 0.5rem;
 
+  // overlap borders of adjacent tabs
+  margin-left: -1px;
   &:first-child {
-    border-left-width: 1px;
+    margin-left: 0;
   }
 
   cursor: pointer;
   &:hover {
       background: $green-row-1;
   }
+
+  $speed: .1s;
+  $curve: cubic-bezier(0.4, 0, 0, 1.0);
+
+  transition:
+    background $curve $speed,
+    margin-top $curve $speed,
+    padding-top $curve $speed;
 }
 
 .tab--active {
