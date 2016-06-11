@@ -3,15 +3,17 @@
   "version": "1.0.0",
   "description": "just a sample",
   "scripts": {
-    "watch": "grunt watch"
+    "watch": "concurrently --kill-others 'grunt watch' 'hs'"
   },
   "author": "Bob <shiftsource@gmail.com>",
   "license": "ISC",
   "devDependencies": {
+    "concurrently": "^2.1.0",
     "eslint": "^2.12.0",
     "grunt": "^1.0.1",
     "grunt-cli": "^1.2.0",
     "grunt-contrib-watch": "^1.0.0",
-    "grunt-sass": "^1.2.0"
+    "grunt-sass": "^1.2.0",
+    "http-server": "^0.9.0"
   }
 }
