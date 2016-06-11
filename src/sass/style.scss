@@ -1,1 +1,114 @@
-body {background: white}
+$header-color: #3890C0;
+$header-current-color: #0D6997;
+$body-text-color: #505050;
+$link-color: #328fc2;
+$font-size: 14px;
+$body-text-line-height: 18px;
+$side-bar-line-height: 21px; // inconsistent scaling
+$accent-color: #650360;
+$green: #BCD7C4;
+$green-row-1: #DDEBE1;
+$green-row-2: #EEF5F0;
+$footer-color: #E7E8E9;
+
+// natural box layout
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    line-height: 1.2857em;
+    color: $body-text-color;
+    background: $footer-color;
+}
+
+h1 {
+    font-size: 36px;
+    font-weight: 200;
+    color: $accent-color;
+    margin-bottom: 4rem;
+}
+
+h4 {
+    font-size: 16px;
+    margin-bottom: .5rem;
+}
+
+a {
+    &:link {
+        color: $link-color;
+    }
+}
+// no border for link images
+a img { border:none; vertical-align:top; }
+
+ul {
+    padding-left: 0;
+    list-style-position: inside;
+    line-height: 1.6rem;
+}
+
+@import 'grid';
+@import 'header';
+
+.content {
+    background: #FFF;
+    padding: 65px 0;
+}
+
+.main {
+    @include cols(9);
+}
+
+.main__header {
+    margin: 0 0 3rem;
+}
+
+.mobile-info {
+    position: relative;
+    background: $green;
+    padding: 1rem;
+    padding-right: 143px;
+    margin-top: 1rem;
+}
+
+.mobile-info__header {
+    color: $accent-color;
+    margin-top: 0;
+}
+
+.mobile-info__phone {
+    position: absolute;
+    right: 1rem;
+    bottom: 1rem;
+}
+
+.rates {
+    margin-top: 4rem;
+}
+
+.rates-header {
+    margin-top: 0;
+    font-size: 28px;
+    font-weight: 200;
+}
+.rates-header__left, .rates-header__right {
+    line-height: 44px;
+    display: inline-block;
+}
+.rates-header__left {
+    border-right: 1px solid $body-text-color;
+    padding-right: 1rem;
+    margin-right: 0.5rem;
+}
+.rates-header__right {
+    font-weight: 400;
+}
+
+@import 'footer';

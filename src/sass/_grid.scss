@@ -1,0 +1,30 @@
+// responsive break points
+$break-xs: 0;
+$break-sm: 544px;
+$break-md: 768px;
+$break-lg: 992px;
+$break-xl: 1200px;
+$gutter: 20px;
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: ($gutter / 2);
+    padding-right: ($gutter / 2);
+    max-width: 960px;
+}
+
+.row {
+    margin-left: ($gutter / -2);
+    margin-right: ($gutter / -2);
+}
+
+@mixin cols($num) {
+    position: relative;
+    padding-left: ($gutter / 2);
+    padding-right: ($gutter / 2);
+    // use col for spacing
+    min-height: 1px;
+    $col-width: ((960px - (12 * $gutter)) / 12);
+    width: ($col-width * $num + $gutter * ($num - 1));
+}

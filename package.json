@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "just a sample",
   "scripts": {
-    "watch": "concurrently --kill-others 'grunt watch' 'hs'"
+    "watch": "concurrently --kill-others 'grunt watch' 'hs pub'"
   },
   "author": "Bob <shiftsource@gmail.com>",
   "license": "ISC",
