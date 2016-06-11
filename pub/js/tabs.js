@@ -1,5 +1,14 @@
 // don't pollute the global namespace
 (function(){
+  // IE9 has no forEach on HtmlCollection, so we'll do this instead
+  function forEach(arr, fn) {
+    for (var i = 0; i < arr.length; i++) {
+      var obj = arr[i];
+      fn(obj);
+    }
+    return;
+  }
+  
   function handleTabClick(ev) {
     var tab = ev.target;
     // if tab is active, do nothing
@@ -12,14 +21,14 @@
     if (content === null) return;
 
     // hide all tab contents;
-    document.querySelectorAll('.news-tabs__inner').forEach(function(el){
+    forEach(document.querySelectorAll('.news-tabs__inner'), function(el){
       el.style.display = 'none';
     })
 
     // show selected content
     content.style.display = 'block';
     // deactivate all tabs
-    document.querySelectorAll('.tab.tab--active').forEach(function(el){
+    forEach(document.querySelectorAll('.tab.tab--active'), function(el){
       el.className = el.className.replace(/ *\btab--active\b/, '');
     })
     // activate this one
@@ -27,7 +36,7 @@
   }
 
   var tabs = document.querySelectorAll('.tab');
-  tabs.forEach(function(tab){
+  forEach(tabs, function(tab){
     tab.addEventListener('click', handleTabClick);
   });
 
