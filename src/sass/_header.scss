@@ -1,5 +1,9 @@
+$header-height: 45px;
+
 .header {
     background: $header-color;
+    height: $header-height;
+    overflow: hidden;
 }
 
 .menu {
@@ -11,13 +15,21 @@
 .menu__link {
     display: inline-block;
     text-transform: lowercase;
-    line-height: 45px;
-    padding: 0 20px;
     font-size: 16px;
+    padding: 0;
+    float: left;
     a {
+        display: block;
+        padding: 0 20px;
+        line-height: 45px;
+
         &:link, &:visited {
             color: #FFF;
             text-decoration: none;
+
+            &:hover {
+                background: darken($header-current-color, 10%);
+            }
         }
     }
     &:last-child {
@@ -27,5 +39,5 @@
 
 .menu__link--current {
     background: $header-current-color;
-    font-weight: bold;;
+    font-weight: bold;
 }

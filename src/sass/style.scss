@@ -41,8 +41,9 @@ h4 {
 }
 
 a {
-    &:link {
-        color: $link-color;
+    color: $link-color;
+    &:hover, &:visited:hover {
+        color: darken($link-color, 20%);
     }
 }
 // no border for link images
@@ -52,6 +53,7 @@ ul {
     padding-left: 0;
     list-style-position: inside;
     line-height: 1.6rem;
+    margin-bottom: 2rem;
 }
 
 @import 'grid';

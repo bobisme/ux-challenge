@@ -22,9 +22,13 @@ footer {
     padding: 0 20px;
     font-size: 16px;
     a {
-        &:link, &:visited {
+        &, &:visited {
             color: $link-color;
             text-decoration: none;
+
+            &:hover {
+                color: darken($link-color, 20%);
+            }
         }
     }
     &:last-child {
