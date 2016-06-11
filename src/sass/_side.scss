@@ -1,0 +1,95 @@
+$tab-content-color: #F5F5F5;
+$inactive-tab-bg: #DDEBE1;
+
+.side {
+  @include cols(3);
+}
+
+.login-button {
+  font-size: 18px;
+  color: #FFF;
+  background: $accent-color;
+  text-align: center;
+  border: 0;
+  outline: 0;
+  line-height: 34px;
+  font-weight: bold;
+  width: 100%;
+  margin-bottom: 2rem;
+
+  cursor: pointer;
+
+  &:hover {
+    background: lighten($accent-color, 10%);
+  }
+  &:active {
+    background: lighten($accent-color, 5%);
+  }
+}
+
+.side-news {
+    width: 100%;
+    overflow: hidden;
+}
+
+.news-tabs {
+    width: 100%;
+    overflow: hidden;
+}
+
+.tab {
+  float: left;
+  font-size: 1.1rem;
+  border: 1px solid #CCC;
+  border-bottom: 0;
+  border-left-width: 0;
+
+  background: $inactive-tab-bg;
+  color: $link-color;
+  padding: 0 1rem;
+  line-height: 2.3rem;
+  margin-top: 0.5rem;
+
+  &:first-child {
+    border-left-width: 1px;
+  }
+
+  cursor: pointer;
+  &:hover {
+      background: $green-row-1;
+  }
+}
+
+.tab--active {
+  background: $tab-content-color;
+  color: lighten($body-text-color, 10%);
+  padding-top: 0.5rem;
+  margin-top: 0;
+  // get that nice little inner highlight
+  box-shadow: inset -1px 1px 0 #FFF;
+  // blend into content
+  border-bottom: 2px solid $tab-content-color;
+  margin-bottom: -2px;
+
+  cursor: initial;
+  &:hover {
+      background: $tab-content-color;
+  }
+}
+
+.news-tabs__content {
+    background: $tab-content-color;
+    width: 100%;
+    overflow: hidden;
+    padding: 2rem 1rem;
+    border: 1px solid #CCC;
+    box-shadow: inset -1px 1px 0 #FFF;
+}
+
+.news-tabs__inner {
+    display: none;
+}
+
+.news-tabs__inner--active {
+    display: block;
+}

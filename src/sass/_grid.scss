@@ -20,11 +20,12 @@ $gutter: 20px;
 }
 
 @mixin cols($num) {
+    display: inline-block;
+    float: left;
     position: relative;
     padding-left: ($gutter / 2);
     padding-right: ($gutter / 2);
     // use col for spacing
     min-height: 1px;
-    $col-width: ((960px - (12 * $gutter)) / 12);
-    width: ($col-width * $num + $gutter * ($num - 1));
+    width: (960px / 12 * $num);
 }

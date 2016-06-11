@@ -37,7 +37,7 @@
   <div class="content">
     <div class="container">
       <div class="row">
-        <div class="main" style="position:relative">
+        <div class="main">
           <h1 class="main__header">Best Bank Ever!</h1>
 
           <p>
@@ -99,11 +99,30 @@
             <div id="rateError" class="rates__error">
               Could not load rate data.
             </div>
-
           </div>
 
         </div>
-        <div class="side"></div>
+
+        <div class="side">
+          <button id="login" class="login-button">Login</button>
+
+          <div class="side-news">
+            <div class="news-tabs">
+              <div class="tab tab--active" data-tab-id="newsContent">News</div>
+              <div class="tab" data-tab-id="archiveContent">Archive</div>
+              <div class="news-tabs__content">
+                <div id="newsContent"
+                  class="news-tabs__inner news-tabs__inner--active">
+                  Hello
+                </div>
+                <div id="archiveContent" class="news-tabs__inner">
+                  Archive
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </div>
