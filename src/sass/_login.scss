@@ -28,6 +28,9 @@
     // NOTE: safari 8 still needs this. iPhone was OK
     // slide in doesn't work on safari 8
     -webkit-transform: translate3d(0, -500px, 0);
+    // NOTE: IE0 needs a prefix, but doesn't have transitions or 3d
+    -ms-transition: transform  .5s  cubic-bezier(0.23, 1, 0.32, 1);
+    -ms-transform: translate(0, -500px);
     will-change: transform;
 
     top: 0;
@@ -43,6 +46,8 @@
         transform: translate3d(0, 0, 0);
         // safari 8 still needs this. iPhone was OK
         -webkit-transform: translate3d(0, 0, 0);
+        // NOTE: IE0 needs a prefix, but doesn't have transitions or 3d
+        -ms-transform: translate(0, 0);
     }
 }
 

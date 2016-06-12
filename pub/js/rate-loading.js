@@ -83,9 +83,9 @@
       var tbody = table.querySelector('tbody');
 
       if (data.length === 0) {
-        tbody.innerHTML = (
+        wrapper.innerHTML = (
           '<div class="rate-table__error">Could not load rate data.</div>');
-        return
+        return;
       }
 
       // sort by apy, descending
@@ -99,7 +99,15 @@
       rates.style.transform = 'translate3d(0,0,0)'
       rates.style.height = '';
 
-      tbody.innerHTML = data.map(getRateRow).join('');
+      // NOTE: this was great, but IE9 can't do it
+      // innnerHTML is readonly for tbody
+      // tbody.innerHTML = data.map(getRateRow).join('');
+      // ... now we have to create a temp element and use
+      // replaceChild
+      var tmp = document.createElement('div');
+      tmp.innerHTML = '<table>' + data.map(getRateRow).join('') + '</table>';
+      tbody.parentNode.replaceChild(tmp.firstChild.firstChild, tbody);
+
       var wrapperHeight = rates.clientHeight;
       // set initial animation state
       rates.style.height = '0';
