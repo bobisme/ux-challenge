@@ -1,5 +1,9 @@
+// All code @2016 Bob. github.com/bobisme
 .main {
-    @include cols(12);
+    @include cols(9);
+    @media (min-width: $break-xs) {
+        @include cols(12);
+    }
     @media (min-width: $break-md) {
         @include cols(8);
     }

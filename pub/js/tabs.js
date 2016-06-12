@@ -1,3 +1,4 @@
+// All code @2016 Bob. github.com/bobisme
 // don't pollute the global namespace
 (function(){
   // IE9 has no forEach on HtmlCollection, so we'll do this instead

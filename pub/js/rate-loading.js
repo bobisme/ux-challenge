@@ -1,3 +1,4 @@
+// All code @2016 Bob. github.com/bobisme
 // keep all this out of the global namespace
 (function(){
 
