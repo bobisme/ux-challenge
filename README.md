@@ -25,9 +25,12 @@ CSS transitions.
     the page.
 -   The tabs will expand/shrink as they are selected.
 -   The tab content will fade and the container will grow/shrink to the size of
-    the next content (except on safari).
+    the next content.
 -   The dark background of the modal fades in and the modal slides in from the
     top.
+
+Tested on IE10, IE9 (rendindering mode in IE10), Chrome 51, Safari 8, Safari on
+iOS 9, and Firefox 48.
 
 ## Code
 
@@ -39,14 +42,19 @@ That is none of the really cool stuff, but some of the useful stuff like
 
 ## Comments
 
-It would be great if the 2 images were already sliced out, then Photoshop wouldn't really be necessary at all.
+It would be great if the 2 images were already sliced out, then Photoshop
+wouldn't really be necessary at all.
 
-It would really great if those images were already SVGs since they're simple vectors anyway.
+It would really great if those images were already SVGs since they're simple
+vectors anyway.
 
 I couldn't really pick out a vertical/typographical rhythm/grid.
 
-The body font should be 16px instead of 14px. Easier to read on higher res
+A body font of 16px instead of 14px would be easier to read on higher res
 screens. Fills the space better on desktops.
+
+The buttons should be "Log In" instead of "Login", where "login" is the noun
+referring to your login information and to "log in" is the action.
 
 ## Dev setup (requires node)
 
