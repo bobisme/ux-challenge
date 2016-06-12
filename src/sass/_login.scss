@@ -38,6 +38,8 @@
     padding: 1rem;
     @media(min-width: $break-md) {
         top: 15%;
+        // should be 15% of view height, where compatible
+        top: 15vh;
         padding: 2rem;
         margin: 0 auto 0;
     }
