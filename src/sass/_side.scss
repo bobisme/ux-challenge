@@ -55,35 +55,50 @@ $inactive-tab-bg: #DDEBE1;
 }
 
 .tab--active {
-  background: $tab-content-color;
-  color: lighten($body-text-color, 10%);
-  padding-top: 0.5rem;
-  margin-top: 0;
-  // get that nice little inner highlight
-  box-shadow: inset -1px 1px 0 #FFF;
-  // blend into content
-  border-bottom: 2px solid $tab-content-color;
-  margin-bottom: -2px;
+    background: $tab-content-color;
+    color: lighten($body-text-color, 10%);
+    padding-top: 0.5rem;
+    margin-top: 0;
+    // get that nice little inner highlight
+    box-shadow: inset -1px 1px 0 #FFF;
+    // blend into content
+    border-bottom: 2px solid $tab-content-color;
+    margin-bottom: -2px;
+    position: relative;
+    // put over active tab
+    z-index: 200;
 
-  cursor: initial;
-  &:hover {
-      background: $tab-content-color;
-  }
+    cursor: initial;
+    &:hover {
+        background: $tab-content-color;
+    }
 }
 
 .news-tabs__content {
     background: $tab-content-color;
     width: 100%;
     overflow: hidden;
-    padding: 2rem 1rem;
+    padding: 0 1rem 1rem;
     border: 1px solid #CCC;
     box-shadow: inset -1px 1px 0 #FFF;
+    position: relative;
+    // put under active tab
+    z-index: 199;
 }
 
 .news-tabs__inner {
-    display: none;
+    // display: none;
+
+    h4 {
+        a {
+            text-decoration: none;
+        }
+    }
+    p {
+        margin-top: .5rem;
+    }
 }
 
 .news-tabs__inner--active {
-    display: block;
+    // display: block;
 }
