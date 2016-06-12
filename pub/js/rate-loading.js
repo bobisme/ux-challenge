@@ -112,9 +112,10 @@
       // set initial animation state
       rates.style.height = '0';
       var curve = 'cubic-bezier(.62,.28,.23,.99)';
-      var speed = '200ms';
+      var speed = 500;
       rates.style.transition = (
-        'opacity '+curve+' '+'400ms'+', height '+curve+' '+speed);
+        'opacity '+curve+' '+Math.floor(speed*1.5)+'ms'
+        +', height '+curve+' '+speed+'ms');
 
       // unhide
       rates.style.visibility = '';
@@ -132,11 +133,15 @@
           rates.style.height = '';
           rates.style.overflow = '';
           rates.style.transform = '';
-        }, 500);
+        }, speed);
       }, 0);
     }
     loadRateData(renderRatesTable, function(){});
   }
 
-  handleRateData();
+  // on script load, wait a little bit and load the data, 
+  // fot the sake of presentation and to simulate and actual API request
+  setTimeout(function(){
+    handleRateData();
+  }, 500);
 })();
