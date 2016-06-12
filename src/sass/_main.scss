@@ -34,8 +34,14 @@
 
 .mobile-info__phone {
     position: absolute;
-    right: 1rem;
+    right: 2rem;
     bottom: 1rem;
+    @media (min-width: $break-xs) {
+        right: 1rem;
+    }
+    @media (min-width: $break-lg) {
+        right: 2rem;
+    }
 }
 
 .rates {

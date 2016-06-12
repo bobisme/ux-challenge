@@ -24,9 +24,10 @@ html {
 body {
     margin: 0;
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    line-height: 1.2857em;
+    line-height: 1.5em;
     color: $body-text-color;
     background: $footer-color;
+    font-size: $font-size;
 }
 
 h1 {
