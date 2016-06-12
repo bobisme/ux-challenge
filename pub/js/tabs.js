@@ -29,15 +29,16 @@
     // get the active inner content
     var active = document.querySelector('.news-tabs__inner--active');
 
+    // pre-set the container height
+    container.style.height = active.offsetHeight + 'px';
+
     // make it render, invisibly and get the height
     content.style.position = 'absolute';
     // hack to get correct height with absolute position
     content.style.paddingRight = '1rem';
     content.style.opacity = 0;
     content.style.display = 'block';
-    var height = content.clientHeight;
-    // pre-set the container height
-    container.style.height = active.clientHeight + 'px';
+    var height = content.offsetHeight;
 
     // pre-set the active content opacity
     active.style.opacity = 1;
