@@ -8,6 +8,8 @@
 
   function openModal() {
     screen.className = screen.className + ' modal-screen--visible';
+    // focus the first input
+    document.querySelectorAll('#modal input')[0].focus();
   }
 
   screen.addEventListener('click', function(ev){
