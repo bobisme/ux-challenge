@@ -27,7 +27,7 @@
 
   function loadRateData(resolve, reject) {
     var request = new XMLHttpRequest();
-    request.open('GET', '/api/data.json', true);
+    request.open('GET', 'api/data.json', true);
 
     request.onload = function() {
       if (request.status >= 200 && request.status < 400) {
