@@ -6,6 +6,12 @@ footer {
 .footer__copy {
     display: inline-block;
     line-height: $footer-line-height;
+    @media(min-width: $break-xs) {
+        font-size: 14px;
+    }
+    @media(min-width: $break-md) {
+        font-size: 16px;
+    }
 }
 
 .foot-menu {
@@ -18,7 +24,6 @@ footer {
 .foot-menu__link {
     display: inline-block;
     text-transform: lowercase;
-    line-height: $footer-line-height;
     padding: 0 20px;
     font-size: 16px;
     a {
@@ -33,6 +38,16 @@ footer {
     }
     &:last-child {
         padding-right: 0;
+    }
+    @media(min-width: $break-xs) {
+        padding: 0 6px;
+        font-size: 14px;
+        line-height: 2rem;
+    }
+    @media(min-width: $break-md) {
+        padding: 0 20px;
+        font-size: 16px;
+        line-height: $footer-line-height;
     }
 }
 

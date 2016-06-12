@@ -72,6 +72,13 @@ ul {
 
     width: 100%;
     overflow: hidden;
+
+    @media(min-width: $break-xs) {
+        padding: 2rem 0;
+    }
+    @media(min-width: $break-md) {
+        padding: 54px 0;
+    }
 }
 
 @import 'main';

@@ -1,7 +1,7 @@
 .modal-screen {
     background-color: transparent;
     left: 0;
-    position: absolute;
+    position: fixed;
     top: 0;
     height: 100%;
     width: 100%;
@@ -16,20 +16,32 @@
 }
 
 .modal {
-    top: 15%;
     margin: 0 auto 0;
     max-width: 500px;
     background: #FFF;
-    padding: 2rem;
     overflow: hidden;
     position: relative;
     box-shadow: 0 0 20px #000;
-    transform: translate3d(0, -200%, 0);
-    will-change: transform;
+    transform: translate3d(0, -500px, 0);
     transition: transform  .5s  cubic-bezier(0.23, 1, 0.32, 1);
+    // NOTE: safari 8 still needs this. iPhone was OK
+    // slide in doesn't work on safari 8
+    -webkit-transform: translate3d(0, -500px, 0);
+    will-change: transform;
+
+    top: 0;
+    margin: 5px;
+    padding: 1rem;
+    @media(min-width: $break-md) {
+        top: 15%;
+        padding: 2rem;
+        margin: 0 auto 0;
+    }
 
     .modal-screen--visible & {
         transform: translate3d(0, 0, 0);
+        // safari 8 still needs this. iPhone was OK
+        -webkit-transform: translate3d(0, 0, 0);
     }
 }
 
@@ -37,6 +49,7 @@
     font-size: 28px;
     font-weight: 300;
     margin-top: 0;
+    line-height: 2rem;
 }
 
 .modal__closer {
@@ -55,6 +68,9 @@ $input-height: 2.5rem;
 
     label, input {
         display: inline-block;
+        @media(max-width: $break-sm) {
+           display: block;
+        }
     }
     label {
         width: 7rem;
@@ -71,9 +87,19 @@ $input-height: 2.5rem;
         border: 1px solid #169FCB;
         font-size: ($input-height * .5);
     }
+    label, input {
+        @media(max-width: $break-sm) {
+           display: block;
+           width: 100%;
+           float: none;
+           text-align: left;
+        }
+    }
 }
 
 @import 'button';
+// NOTE: i had to borrow an iPhone to test
+// this button renders strangely there
 .form-submit {
     @include button();
     float: right;
@@ -81,4 +107,5 @@ $input-height: 2.5rem;
     width: auto;
     margin: 1rem 0 0;
     line-height: 2.5rem;
+    border-radius: 0;
 }

@@ -1,5 +1,14 @@
 .main {
-    @include cols(9);
+    @include cols(12);
+    @media (min-width: $break-md) {
+        @include cols(8);
+    }
+    @media (min-width: $break-lg) {
+        @include cols(9);
+    }
+    @media (min-width: $break-xl) {
+        @include cols(8);
+    }
 }
 
 .main__header {
@@ -35,6 +44,12 @@
     margin-top: 0;
     font-size: 28px;
     font-weight: 200;
+    @media(min-width: $break-xs) {
+        font-size: 22px;
+    }
+    @media(min-width: $break-md) {
+        font-size: 28px;
+    }
 }
 .rates-header__left, .rates-header__right {
     line-height: 44px;
@@ -67,14 +82,23 @@
         font-size: 0.8rem;
         font-weight: 400;
         color: lighten($body-text-color, 30%);
-        line-height: 2rem;
+        padding: .5rem 0;
     }
 
     td {
         font-size: 16px;
-        line-height: 3rem;
         background: $green-row-1;
-        padding: 0 20px;
+        padding: 1rem 20px;
+    }
+
+    .rate-row__name {
+        padding-right: 0;
+    }
+    .rate-row__apy {
+        padding: 0;
+    }
+    .rate-row__name {
+        padding-right: 0;
     }
 }
 

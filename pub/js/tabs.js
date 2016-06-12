@@ -11,6 +11,7 @@
   
   // render a fading transition between the tabs using the FLIP method
   function handleTabClick(ev) {
+    ev.preventDefault();
     var tab = ev.target;
     // if tab is active, do nothing
     if (tab.className.match(/\btab--active\b/) !== null) return;

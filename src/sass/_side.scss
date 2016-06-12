@@ -4,7 +4,19 @@ $inactive-tab-bg: #DDEBE1;
 @import 'button';
 
 .side {
-  @include cols(3);
+    @include cols(3);
+    @media (min-width: $break-xs) {
+        @include cols(12);
+    }
+    @media (min-width: $break-md) {
+        @include cols(4);
+    }
+    @media (min-width: $break-lg) {
+        @include cols(3);
+    }
+    @media (min-width: $break-xl) {
+        @include cols(4);
+    }
 }
 
 .login-button {

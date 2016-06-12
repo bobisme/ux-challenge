@@ -1,19 +1,20 @@
 @mixin button {
-  font-size: 18px;
-  color: #FFF;
-  background: $accent-color;
-  text-align: center;
-  border: 0;
-  line-height: 34px;
-  font-weight: bold;
-  width: 100%;
-  margin-bottom: 2rem;
+    display: inline-block;
+    font-size: 18px;
+    color: #FFF;
+    background: $accent-color;
+    text-align: center;
+    border: 0;
+    line-height: 34px;
+    font-weight: bold;
+    width: 100%;
+    margin-bottom: 2rem;
 
-  cursor: pointer;
-  &:hover {
-    background: lighten($accent-color, 10%);
-  }
-  &:active {
-    background: lighten($accent-color, 5%);
-  }
+    cursor: pointer;
+    &:hover {
+        background: lighten($accent-color, 10%);
+    }
+    &:active {
+        background: lighten($accent-color, 5%);
+    }
 }

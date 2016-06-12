@@ -4,6 +4,13 @@ $break-sm: 544px;
 $break-md: 768px;
 $break-lg: 992px;
 $break-xl: 1200px;
+
+$xs-width: 300px;
+$sm-width: 540px;
+$md-width: 740px;
+$lg-width: 960px;
+$xl-width: 1200px;
+
 $gutter: 20px;
 
 .container {
@@ -11,7 +18,19 @@ $gutter: 20px;
     margin-right: auto;
     padding-left: ($gutter / 2);
     padding-right: ($gutter / 2);
-    max-width: 960px;
+    max-width: 100%;
+    @media (min-width: $break-sm) {
+        max-width: $sm-width;
+    }
+    @media (min-width: $break-md) {
+        max-width: $md-width;
+    }
+    @media (min-width: $break-lg) {
+        max-width: $lg-width;
+    }
+    @media (min-width: $break-xl) {
+        max-width: $xl-width;
+    }
 }
 
 .row {
@@ -27,5 +46,17 @@ $gutter: 20px;
     padding-right: ($gutter / 2);
     // use col for spacing
     min-height: 1px;
-    width: (960px / 12 * $num);
+    width: (8.33% * $num);
+    @media (min-width: $break-sm) {
+        width: ($sm-width / 12 * $num);
+    }
+    @media (min-width: $break-md) {
+        width: ($md-width / 12 * $num);
+    }
+    @media (min-width: $break-lg) {
+        width: ($lg-width / 12 * $num);
+    }
+    @media (min-width: $break-xl) {
+        width: ($xl-width / 12 * $num);
+    }
 }
