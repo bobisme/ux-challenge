@@ -18,7 +18,8 @@ breakpoints from wide browsers to vertical and horizontal tablets to iPhones.
 
 Also there were no specifications about animations or transitions... so I added
 some of those too.  Natural movement and transitions are becoming a large part
-of UX today.
+of UX today. But none of these are working in IE9, because it doesn't support
+CSS transitions.
 
 -   The rates are loaded asynchronously then faded/expanded into the content of
     the page.
