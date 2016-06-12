@@ -6,6 +6,7 @@
   <link rel="stylesheet" href="/css/style.css" type="text/css">
 </head>
 <body>
+
   <div class="header">
     <div class="container">
       <nav>
@@ -108,8 +109,9 @@
 
           <div class="side-news">
             <div class="news-tabs">
-              <div class="tab tab--active" data-tab-id="newsContent">News</div>
-              <div class="tab" data-tab-id="archiveContent">Archive</div>
+              <a href="#" class="tab tab--active" data-tab-id="newsContent">News</a>
+              <a href="#" class="tab" data-tab-id="archiveContent">Archive</a>
+
               <div class="news-tabs__content">
                 <div id="newsContent"
                   class="news-tabs__inner news-tabs__inner--active">
@@ -154,8 +156,27 @@
     </div>
   </footer>
 
+  <div id="modalScreen" class="modal-screen">
+    <div id="modal" class="modal">
+      <h2 class="modal__header">Sign In To Your Account</h2>
+      <form action="#" method="GET">
+        <div class="form-field">
+          <label for="username">Username</label>
+          <input id="username" name="username" type="text">
+        </div>
+        <div class="form-field">
+          <label for="password">Password</label>
+          <input id="password" name="password" type="password">
+        </div>
+        <input class="form-submit" name="submit" type="submit" value="Login">
+      </form>
+      <a href="#" class="modal__closer">&#10006;</a>
+    </div>
+  </div>
+
   <script src="/js/rate-loading.js"></script>
   <script src="/js/tabs.js"></script>
+  <script src="/js/login.js"></script>
 
 </body>
 </html>

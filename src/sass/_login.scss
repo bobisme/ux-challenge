@@ -1,0 +1,83 @@
+.modal-screen {
+    background-color: transparent;
+    left: 0;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    transition: background-color .3s;
+    pointer-events: none;
+}
+
+.modal-screen--visible {
+    background-color: rgba(0, 0, 0, 0.5);
+    pointer-events: all;
+}
+
+.modal {
+    top: 15%;
+    margin: 0 auto 0;
+    max-width: 500px;
+    background: #FFF;
+    padding: 2rem;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 0 20px #000;
+    transform: translate3d(0, -200%, 0);
+    will-change: transform;
+    transition: transform  .5s  cubic-bezier(0.23, 1, 0.32, 1);
+
+    .modal-screen--visible & {
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.modal__header {
+    font-size: 28px;
+    font-weight: 300;
+    margin-top: 0;
+}
+
+.modal__closer {
+    text-decoration: none;
+    font-size: 1.5rem;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+$input-height: 2.5rem;
+.form-field {
+    line-height: $input-height;
+    padding: .7rem 0;
+    width: 100%;
+
+    label, input {
+        display: inline-block;
+    }
+    label {
+        width: 7rem;
+        text-align: right;
+        font-weight: bold;
+        padding-right: 2rem;
+    }
+    input {
+        width: 74%;
+        line-height: $input-height;
+        height: $input-height;
+        float: right;
+        padding: 0 .5rem;
+        border: 1px solid #169FCB;
+        font-size: ($input-height * .5);
+    }
+}
+
+@import 'button';
+.form-submit {
+    @include button();
+    float: right;
+    padding: 0 4rem;
+    width: auto;
+    margin: 1rem 0 0;
+    line-height: 2.5rem;
+}

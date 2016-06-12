@@ -1,30 +1,14 @@
 $tab-content-color: #F5F5F5;
 $inactive-tab-bg: #DDEBE1;
 
+@import 'button';
+
 .side {
   @include cols(3);
 }
 
 .login-button {
-  font-size: 18px;
-  color: #FFF;
-  background: $accent-color;
-  text-align: center;
-  border: 0;
-  outline: 0;
-  line-height: 34px;
-  font-weight: bold;
-  width: 100%;
-  margin-bottom: 2rem;
-
-  cursor: pointer;
-
-  &:hover {
-    background: lighten($accent-color, 10%);
-  }
-  &:active {
-    background: lighten($accent-color, 5%);
-  }
+    @include button();
 }
 
 .side-news {
@@ -48,6 +32,7 @@ $inactive-tab-bg: #DDEBE1;
   padding: 0 1rem;
   line-height: 2.3rem;
   margin-top: 0.5rem;
+  text-decoration: none;
 
   // overlap borders of adjacent tabs
   margin-left: -1px;
